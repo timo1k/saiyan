@@ -1,34 +1,30 @@
-import "./globals.css";
-
+import type React from "react";
+import "@/app/globals.css";
+import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { WalletProvider } from "@/components/providers/WalletProvider";
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
-import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Metadata } from "next";
 import { PropsWithChildren } from "react";
 import { RootHeader } from "@/components/RootHeader";
 import { WrongNetworkAlert } from "@/components/WrongNetworkAlert";
 import { QueryProvider } from "@/components/providers/QueryProvider";
 import { RootFooter } from "@/components/RootFooter";
 
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Aptos Full Stack Demo",
-  description: "An demo of a full stack app on Aptos",
+  description: "A demo of a full stack app on Aptos",
 };
 
 const RootLayout = ({ children }: PropsWithChildren) => {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body
         className={cn(
-          "flex justify-center min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          `${inter.className} bg-[#0B1416] text-white min-h-screen flex justify-center font-sans antialiased`
         )}
       >
         <ThemeProvider
