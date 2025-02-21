@@ -14,6 +14,8 @@
     "@ducanh2912/next-pwa": "^10.2.9",
     "@hookform/resolvers": "^3.7.0",
     "@neondatabase/serverless": "^0.9.5",
+    "@panoraexchange/widget-sdk": "^1.0.12",
+    "@pontem/wallet-adapter-plugin": "^0.2.1",
     "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-collapsible": "^1.0.3",
     "@radix-ui/react-dialog": "^1.0.5",
