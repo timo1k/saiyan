@@ -9,10 +9,12 @@
 //     </div>
 //   );
 // }
-
+"use client"
 import SearchBar from "@/components/search-bar";
 import TrendingRequests from "@/components/trending-requests";
 import { AptosLogo } from "@/components/aptos-logo";
+
+
 
 export default function HomePage() {
   return (
@@ -26,7 +28,10 @@ export default function HomePage() {
           </h1>
 
           <SearchBar />
+
           <TrendingRequests />
+
+
         </div>
       </main>
     </div>
